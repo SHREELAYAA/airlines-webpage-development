@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Hotels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <h2>Find Hotels Near Your Destination</h2>
+        <br>
+
+        <form id="hotelForm" onsubmit="return showHotels()">
+            <label for="location">Enter Location:</label><br>
+            <input type="text" id="location" name="location" required><br><br>
+
+            <button type="submit">Search Hotels</button>
+
+            <p id="hotelResults"></p>
+            <br>
+            <p>Thank You For Choosing Liyaar</p>
+            <button class="back-button" onclick="window.location.href='liaaa.html'">← Back to Home</button>
+
+        </form>
+
+        <script>
+            function showHotels() {
+                const location = document.getElementById("location").value;
+                let results = "Showing top hotels near " + location + ":\n";
+                results += "1. Grand Horizon Hotel\n";
+                results += "2. Skyview Inn\n";
+                results += "3. Cloud Nine Suites\n";
+                results += "4. Horizon Stay\n";
+                results += "5. Paradise\n";
+
+                document.getElementById("hotelResults").innerText = results;
+                return false;
+            }
+        </script>
+    </center>
+</body>
+</html>

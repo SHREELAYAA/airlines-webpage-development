@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Cargo</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <h2>Book Your Cargo with Liyaar</h2>
+        <form id="cargoForm">
+            <label for="origin">Origin:</label><br>
+            <input type="text" id="origin" name="origin" required><br><br>
+
+            <label for="destination">Destination:</label><br>
+            <input type="text" id="destination" name="destination" required><br><br>
+
+            <label for="DepartureDate">Date of Departure:</label><br>
+            <input type="text" id="DepartureDate" name="DepartureDate" required><br><br>
+
+            <label for="cargoType">Type of Cargo:</label><br>
+            <select id="cargoType">
+                <option value="">Select</option>
+                <option>Dry Ice</option>
+                <option>Class 3 Flammable</option>
+                <option>Class 7 RadioActive Materials</option>
+                <option>Lithium Batteries</option>
+                <option>Biological Products UN 3373</option>
+                <option>Environmentally hazardous substances</option>
+            </select>
+            <br><br>
+
+            <button type="button" onclick="submitCargo()">Book Cargo</button><br>
+            <p id="result"></p>
+        </form>
+
+        <br>
+        <button class="back-button" onclick="window.location.href='liaaa.html'">← Back to Home</button>
+
+
+        <script>
+            function submitCargo() {
+                const origin = document.getElementById("origin").value;
+                const destination = document.getElementById("destination").value;
+                const DepartureDate = document.getElementById("DepartureDate").value;
+                const cargoType = document.getElementById("cargoType").value;
+        
+                if (origin && destination && DepartureDate && cargoType) {
+                    document.getElementById("result").innerText =
+                        "Your cargo has been booked successfully. Thank you for choosing Liyaar!";
+                } else {
+                    document.getElementById("result").innerText =
+                        "Please fill in all fields.";
+                }
+            }
+        
+            function goHome() {
+                window.location.href = "liaaa.html"; 
+            }
+        </script>
+    </center>
+</body>
+</html>
+        

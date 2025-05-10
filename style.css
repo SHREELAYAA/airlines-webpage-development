@@ -1,0 +1,93 @@
+/* Global Reset and Styling */
+
+
+body {
+    background-image: url('flight.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Main Heading Style */
+p.c {
+    font-style: oblique;
+    font-size: 45px;
+    color: rgb(219, 175, 122);
+    text-align: center;
+}
+
+/* Input & Selection Fields */
+select,
+input,
+button {
+    font-size: 20px;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Headings */
+h2 {
+    color: rgb(219, 175, 122);
+    font-size: 28px;
+}
+
+/* Responsive Design for Mobile */
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url('flight.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100vh;
+        padding: 10px;
+    }
+
+    select,
+    input,
+    button {
+        width: 90%;
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p.c {
+        font-size: 30px;
+    }
+}
+/* Back Button Styling */
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(219, 175, 122); /* Golden color */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgb(199, 155, 102);
+}
+
+/* Form Styling */
+form {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+

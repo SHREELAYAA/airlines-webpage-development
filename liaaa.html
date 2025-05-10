@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css"> 
+    <script>
+        function goToBooking(select) {
+            if (select.value === "find") {
+                window.location.href = "booking.html";
+            }
+        }
+
+        function book(select){
+            if(select.value === "find1"){
+                window.location.href="bookflight.html";
+            }
+            if(select.value === "find2"){
+                window.location.href="hotels.html";
+            }
+            if(select.value === "find3"){
+                window.location.href="bookcargo.html";
+            }
+        }
+
+        function offer(select) {
+            if (select.value === "offers") {
+                window.location.href = "offers.html";
+            }
+        }
+
+        function checkin(select) {
+            if (select.value === "checkin"){
+                window.location.href = "checkin.html";
+            }
+        }
+    </script>      
+</head>
+<body>
+    <br><br><br><br><br>
+    <p class="c"><i>Liyaar</i></p>
+    <br>
+
+    <center>
+    <select onchange="book(this)">
+        <option>Book Flight, Hotel or CarGo </option>
+        <option value="find1">✈︎ Book Flight</option>
+        <option value="find2">Hotels</option>
+        <option value="find3">✈︎ Book CarGo</option>
+    </select>
+    
+
+    <select onchange="goToBooking(this)">
+        <option>Trips</option>
+        <option value="find">Find/view Booking</option>
+    </select>
+
+    <select onchange="offer(this)">
+        <option value="">Offers</option>
+        <option value="offers">View Offers</option>
+    </select>
+    
+
+    <select onchange="checkin(this)">
+        <option value="">Check-In</option>
+        <option value="checkin">Web Check-In</option>
+    </select>
+    <br><br><br>
+    <p><i>Fly As Far As You Can</i></p>
+    </center>
+</body>
+</html>

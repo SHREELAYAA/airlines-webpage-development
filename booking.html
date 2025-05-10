@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find/View Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <h2>Find Your Booking</h2>
+        <br>
+
+        <form onsubmit="return thanks()">
+            <label for="pnr">PNR Number:</label><br>
+            <input type="text" id="pnr" name="pnr" required><br><br>
+
+            <label for="email">Email ID:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <button type="submit">Find Booking</button>
+
+            <p id="result"></p>
+            <br>
+            <button class="back-button" onclick="window.location.href='liaaa.html'">← Back to Home</button>
+
+        </form>
+
+        <script>
+            function thanks() {
+                const pnr = document.getElementById("pnr").value;
+                const email = document.getElementById("email").value;
+
+                if (pnr && email) {
+                    document.getElementById("result").innerText = 
+                        "The Flight is referred and thank you for choosing Liyaar.";
+                }
+
+                return false; 
+            }
+        </script>
+    </center>
+</body>
+</html>
+
+

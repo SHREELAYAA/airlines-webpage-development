@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Flight</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <h2>Your Booking</h2>
+        <br>
+
+        <form id="bookingForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email ID:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="from">From:</label><br>
+            <input type="text" id="from" name="from" required><br><br>
+
+            <label for="to">To:</label><br>
+            <input type="text" id="to" name="to" required><br><br>
+
+            <button type="button" onclick="bookflight()">Book Flight</button>
+
+            <p id="result"></p>
+            <br>
+            <button class="back-button" onclick="window.location.href='liaaa.html'">← Back to Home</button>
+
+        </form>
+
+        <script>
+            function bookflight() {
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const from = document.getElementById("from").value;
+                const to = document.getElementById("to").value;
+
+                if (name && email && from && to) {
+                    document.getElementById("result").innerText = 
+                        "Your Flight is Booked and thank you for choosing Liyaar.";
+                } else {
+                    document.getElementById("result").innerText = 
+                        "Please fill out all fields.";
+                }
+            }
+        </script>
+    </center>
+</body>
+</html>
+
